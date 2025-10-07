@@ -7,7 +7,7 @@ function App() {
   const [panier, setPanier] = useState([]);
 
   return (
-    <div className="container">
+    <div className="flex justify-around flex-col lg:flex-row items-center lg:items-start">
       <ShoppingCard panier={panier} setPanier={setPanier} />
       <Panier panier={panier} />
     </div>
