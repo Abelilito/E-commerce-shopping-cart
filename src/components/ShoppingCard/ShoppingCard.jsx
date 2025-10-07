@@ -1,6 +1,9 @@
 import { CircleMinus, CirclePlus } from "lucide-react";
 import CustomButton from "../CustomButton";
 import { Product } from "../Product/Product";
+import nikkonImg from "../../assets/products/nikkon_zf.jpg";
+import hermanPhoenix from "../../assets/products/harman_phoenix.jpg";
+import objectif from "../../assets/products/objectif.jpg";
 
 export const ShoppingCard = ({ panier, setPanier }) => {
   const lists = [
@@ -13,7 +16,7 @@ export const ShoppingCard = ({ panier, setPanier }) => {
         Suivi 3D - Jusqu'à 4K 60p - Switch couleur / noir et blanc
       `,
       price: 2399,
-      img_url: "src/assets/products/nikkon_zf.jpg",
+      img_url: nikkonImg,
     },
     {
       id: 2,
@@ -24,7 +27,7 @@ export const ShoppingCard = ({ panier, setPanier }) => {
         Une plus grande latitude d'exposition
       `,
       price: 14,
-      img_url: "src/assets/products/harman_phoenix.jpg",
+      img_url: hermanPhoenix,
     },
     {
       id: 3,
@@ -35,7 +38,7 @@ export const ShoppingCard = ({ panier, setPanier }) => {
         Monture nikon Z
       `,
       price: 229,
-      img_url: "src/assets/products/objectif.jpg",
+      img_url: objectif,
     },
   ];
 
