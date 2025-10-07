@@ -5,6 +5,7 @@ import tailwindcss from "tailwindcss";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/E-commerce-shopping-cart",
   css: {
     postcss: {
       plugins: [tailwindcss()],
