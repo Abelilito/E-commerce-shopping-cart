@@ -7,9 +7,10 @@ export const Panier = ({ panier }) => {
       <div className="flex flex-col gap-8 w-full lg:w-[21rem]">
         <div
           className={
-            sumTotal > 0 &&
-            "border-b border-b-solid border-gray-300" +
-              " flex flex-col gap-8 lg:gap-[4rem] h-auto lg:h-[356px] pb-8 lg:pb-0"
+            sumTotal > 0
+              ? "border-b border-b-solid border-gray-300" +
+                " flex flex-col gap-8 lg:gap-[4rem] h-auto lg:h-[356px] pb-8 lg:pb-0"
+              : ""
           }
         >
           {panier
