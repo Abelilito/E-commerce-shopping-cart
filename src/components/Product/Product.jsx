@@ -1,3 +1,5 @@
+import FormatAmout from "../FormatAmout/FormatAmout";
+
 export const Product = ({ name, description, price, img_url, children }) => {
   return (
     <>
@@ -15,11 +17,7 @@ export const Product = ({ name, description, price, img_url, children }) => {
       </div>
 
       <div className="font-bold text-[16px] block text-center w-[6rem]">
-        {price}€
-        <sup className="relative align-baseline mb-[5px] text-[0.6em]">00</sup>
-        <sub className="relative align-baseline mb-0 left-[2px] text-[0.5em]">
-          TTC
-        </sub>
+        <FormatAmout amount={price} />
       </div>
 
       {children}

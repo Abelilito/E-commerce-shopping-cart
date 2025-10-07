@@ -1,3 +1,5 @@
+import FormatAmout from "../FormatAmout/FormatAmout";
+
 export const Panier = ({ panier }) => {
   const sumTotal = panier.reduce((n, { total }) => n + total, 0);
   return (
@@ -16,13 +18,17 @@ export const Panier = ({ panier }) => {
               <div key={index}>
                 <div className="font-bold">{p.name}</div>
                 <div className="text-[14px]">Quantité : {p.quantity} </div>
-                <div className="text-[14px]">Total : {p.total} </div>
+                <div className="text-[14px] flex gap-[5px]">
+                  Total : <FormatAmout amount={p.total} />
+                </div>
               </div>
             ))}
         </div>
 
         {sumTotal > 0 && (
-          <div className="font-bold">TOTAL TTC : {sumTotal}</div>
+          <div className="font-bold flex gap-[5px]">
+            TOTAL TTC : <FormatAmout amount={sumTotal} />
+          </div>
         )}
       </div>
     </>
